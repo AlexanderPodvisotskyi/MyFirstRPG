@@ -9,8 +9,17 @@ public class PlayerController : MonoBehaviour
 
     public Animator myAnimator;
 
+    public static PlayerController instense;
+
     // Start is called before the first frame update
     void Start() {
+        if (instense == null)
+        {
+            instense = this;
+        } else 
+        {
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(gameObject);
     }
 
