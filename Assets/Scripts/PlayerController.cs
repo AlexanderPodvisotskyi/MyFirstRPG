@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController instense;
 
+    public string areaTransitionName;
+
     // Start is called before the first frame update
     void Start() {
         if (instense == null)

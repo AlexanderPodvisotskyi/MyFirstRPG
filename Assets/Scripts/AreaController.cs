@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class AreaController : MonoBehaviour
 {
     public string nextArea;
+
+    public string areaTransitionName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,7 @@ public class AreaController : MonoBehaviour
         if (other.tag == "Player")
         {
             SceneManager.LoadScene(nextArea);
+            PlayerController.instense.areaTransitionName = areaTransitionName;
         }
     }
 }
