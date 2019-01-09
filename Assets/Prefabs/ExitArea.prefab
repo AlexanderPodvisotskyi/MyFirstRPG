@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffa211139b933496a8f6757a0f93f4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionName: 
+  transitionName: Countryside-1
 --- !u!1 &4973183093992152067
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,4 +116,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextArea: MainScene
-  areaTransitionName: 
+  areaTransitionName: Countryside-1
+  theEntrance: {fileID: 4214863209552853166}
