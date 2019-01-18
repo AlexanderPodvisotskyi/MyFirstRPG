@@ -127,12 +127,12 @@ PrefabInstance:
     - target: {fileID: 742237593499251687, guid: 68a2fea042ba34338ab33492ae41c970,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -3.93
       objectReference: {fileID: 0}
     - target: {fileID: 742237593499251687, guid: 68a2fea042ba34338ab33492ae41c970,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.19
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 742237593499251687, guid: 68a2fea042ba34338ab33492ae41c970,
         type: 3}
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a2fea042ba34338ab33492ae41c970, type: 3}
---- !u!4 &232821213 stripped
+--- !u!4 &852098792 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 742237593499251687, guid: 68a2fea042ba34338ab33492ae41c970,
     type: 3}
@@ -3606,12 +3606,12 @@ PrefabInstance:
     - target: {fileID: 5758832549501471059, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6276963
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 5758832549501471059, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3413132
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 5758832549501471059, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
@@ -3662,16 +3662,16 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 232821213}
+      objectReference: {fileID: 852098792}
+    - target: {fileID: 5758832549501471057, guid: 7d5c4c08766944462b9ad1e44fd95282,
+        type: 3}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 1058542491}
     - target: {fileID: 5758832549501471056, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
-      propertyPath: field of view
-      value: 35.656986
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758832549501471056, guid: 7d5c4c08766944462b9ad1e44fd95282,
-        type: 3}
-      propertyPath: far clip plane
-      value: 1000
+      propertyPath: orthographic size
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5c4c08766944462b9ad1e44fd95282, type: 3}
