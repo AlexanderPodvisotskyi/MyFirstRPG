@@ -1,49 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AreaController : MonoBehaviour
 {
-    public string nextArea;
-    public string areaTransitionName;
+	public string nextArea;
+	public string areaTransitionName;
 
-    public AreaEntrance theEntrance;
-    public float waitToLoad = 1f;
+	public AreaEntrance theEntrance;
+	public float waitToLoad = 1f;
 
-    private bool shouldLoadAfterFade;
+	private bool shouldLoadAfterFade;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        theEntrance.transitionName = areaTransitionName;
-        
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
+		theEntrance.transitionName = areaTransitionName;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (shouldLoadAfterFade)
-        {
-            waitToLoad -= Time.deltaTime;
+	}
 
-            if (waitToLoad <= 0)
-            {
-                shouldLoadAfterFade = false;
-                SceneManager.LoadScene(nextArea);
-            }
-        }
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (shouldLoadAfterFade)
+		{
+			waitToLoad -= Time.deltaTime;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            //SceneManager.LoadScene(nextArea);
-            shouldLoadAfterFade = true;
-            UIFade.instance.FadeToBlack();
+			if (waitToLoad <= 0)
+			{
+				shouldLoadAfterFade = false;
+				SceneManager.LoadScene(nextArea);
+			}
+		}
+	}
 
-            PlayerController.instense.areaTransitionName = areaTransitionName;
-        }
-    }
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.tag == "Player")
+		{
+			//SceneManager.LoadScene(nextArea);
+			shouldLoadAfterFade = true;
+			UIFade.instance.FadeToBlack();
+
+			PlayerController.instense.areaTransitionName = areaTransitionName;
+		}
+	}
 }

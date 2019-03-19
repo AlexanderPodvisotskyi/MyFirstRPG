@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EssentialsLoader : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class EssentialsLoader : MonoBehaviour
 	{
 		if (UIFade.instance == null)
 		{
-			UIFade.instance =	Instantiate(UIScreen).GetComponent<UIFade>();
+			UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
 		}
 
 		if (PlayerController.instense == null)
