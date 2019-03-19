@@ -20,7 +20,7 @@ public class CameraConroller : MonoBehaviour
     // Start is called before the first fr4ame update
     void Start()
     {
-        target = PlayerController.instense.transform;
+        target = FindObjectOfType<PlayerController>().transform;
 
         halfHeigth = Camera.main.orthographicSize;
         halfWidth = halfHeigth * Camera.main.aspect;

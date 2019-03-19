@@ -14,6 +14,7 @@ public class AreaEntrance : MonoBehaviour
             PlayerController.instense.transform.position = transform.position;
         }
 
+        UIFade.instance.FadeFromBlack();
     }
 
     // Update is called once per frame

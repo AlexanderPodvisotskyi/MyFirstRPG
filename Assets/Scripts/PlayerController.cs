@@ -21,9 +21,11 @@ public class PlayerController : MonoBehaviour
         if (instense == null)
         {
             instense = this;
-        } else 
+        } 
+        else 
         {
-            Destroy(gameObject);
+			if (instense != this)
+            	Destroy(gameObject);
         }
 
         DontDestroyOnLoad(gameObject);
