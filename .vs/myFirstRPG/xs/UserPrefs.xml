@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogActivator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharStats.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="17" Column="50" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="44" Column="86" />
       <File FileName="Assets/Scripts/AreaController.cs" Line="12" Column="23" />
       <File FileName="Assets/Scripts/AreaEntrance.cs" Line="12" Column="27" />
       <File FileName="Assets/Scripts/PlayerLoader.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CameraConroller.cs" Line="13" Column="2" />
       <File FileName="Assets/Scripts/UIFade.cs" Line="35" Column="4" />
-      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="12" Column="4" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="19" Column="51" />
-      <File FileName="Assets/Scripts/DialogActivator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="23" Column="36" />
+      <File FileName="Assets/Scripts/DialogManager.cs" Line="68" Column="29" />
+      <File FileName="Assets/Scripts/DialogActivator.cs" Line="16" Column="2" />
+      <File FileName="Assets/Scripts/CharStats.cs" Line="8" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
