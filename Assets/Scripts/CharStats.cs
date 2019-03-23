@@ -5,8 +5,13 @@ using UnityEngine;
 public class CharStats : MonoBehaviour
 {
 	public string nameHero;
+
 	public int playerLevel = 1;
+
 	public int currentExp;
+	public int[] expToNextLevel;
+	public int maxLevel = 100;
+	public int baseExp = 1000;
 
 	public int currentHP;
 	public int maxHP = 100;
@@ -28,7 +33,13 @@ public class CharStats : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		expToNextLevel = new int[maxLevel];
+		expToNextLevel[1] = baseExp;
 
+		for (int i = 2; i < expToNextLevel.Length; i++)
+		{
+			expToNextLevel[i] = Mathf.FloorToInt(expToNextLevel[i - 1] * 1.05f) - (Mathf.FloorToInt(expToNextLevel[i - 1] * 1.05f) % 50);
+		}
 	}
 
 	// Update is called once per frame
