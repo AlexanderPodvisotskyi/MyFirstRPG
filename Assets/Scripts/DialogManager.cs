@@ -12,11 +12,16 @@ public class DialogManager : MonoBehaviour
 	public string[] dialogLinesArray;
 
 	public int currentLine;
+	private bool justStartet;
+
+	public static DialogManager instance;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		dialogText.text = dialogLinesArray[currentLine];
+		instance = this;
+
+		// dialogText.text = dialogLinesArray[currentLine];
 	}
 
 	// Update is called once per frame
@@ -26,18 +31,36 @@ public class DialogManager : MonoBehaviour
 		{
 			if (Input.GetButtonUp("EnterDialog"))
 			{
-				currentLine++;
-
-				if (currentLine >= dialogLinesArray.Length)
+				if (!justStartet)
 				{
-					DialogBox.SetActive(false);
+					currentLine++;
+
+					if (currentLine >= dialogLinesArray.Length)
+					{
+						DialogBox.SetActive(false);
+					}
+					else
+					{
+						dialogText.text = dialogLinesArray[currentLine];
+					}
 				}
 				else
 				{
-					dialogText.text = dialogLinesArray[currentLine];
+					justStartet = false;
 				}
 			}
 		}
+	}
 
+	public void ShowDialog(string [] newLines)
+	{
+		dialogLinesArray = newLines;
+
+		currentLine = 0;
+
+		dialogText.text = dialogLinesArray[0];
+		DialogBox.SetActive(true);
+
+		justStartet = true;
 	}
 }
