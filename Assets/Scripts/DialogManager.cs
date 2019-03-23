@@ -43,6 +43,8 @@ public class DialogManager : MonoBehaviour
 					}
 					else
 					{
+						checkName();
+
 						dialogText.text = dialogLinesArray[currentLine];
 					}
 				}
@@ -54,16 +56,29 @@ public class DialogManager : MonoBehaviour
 		}
 	}
 
-	public void ShowDialog(string [] newLines)
+	public void ShowDialog(string [] newLines, bool isNPS)
 	{
 		dialogLinesArray = newLines;
 
 		currentLine = 0;
 
-		dialogText.text = dialogLinesArray[0];
+		checkName();
+
+		dialogText.text = dialogLinesArray[currentLine];
 		DialogBox.SetActive(true);
+
+		NPSBox.SetActive(isNPS);
 
 		justStartet = true;
 		PlayerController.instense.canMove = false;
+	}
+
+	public void checkName()
+	{
+		if(dialogLinesArray[currentLine].StartsWith("n-"))
+		{
+			nameNPSText.text = dialogLinesArray[currentLine].Replace("n-", "");
+			currentLine++;
+		}
 	}
 }

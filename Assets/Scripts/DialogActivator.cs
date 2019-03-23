@@ -6,6 +6,8 @@ public class DialogActivator : MonoBehaviour
 
 	private bool canActivate;
 
+	public bool isNPS = true;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -17,7 +19,7 @@ public class DialogActivator : MonoBehaviour
 	{
 		if (canActivate && Input.GetButtonDown("EnterDialog") && !DialogManager.instance.DialogBox.activeInHierarchy)
 		{
- 			DialogManager.instance.ShowDialog(lines);
+ 			DialogManager.instance.ShowDialog(lines, isNPS);
 		}
 	}
 
