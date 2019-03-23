@@ -38,6 +38,8 @@ public class DialogManager : MonoBehaviour
 					if (currentLine >= dialogLinesArray.Length)
 					{
 						DialogBox.SetActive(false);
+
+						PlayerController.instense.canMove = true;
 					}
 					else
 					{
@@ -62,5 +64,6 @@ public class DialogManager : MonoBehaviour
 		DialogBox.SetActive(true);
 
 		justStartet = true;
+		PlayerController.instense.canMove = false;
 	}
 }
