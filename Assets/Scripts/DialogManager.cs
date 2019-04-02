@@ -39,7 +39,7 @@ public class DialogManager : MonoBehaviour
 					{
 						DialogBox.SetActive(false);
 
-						PlayerController.instense.canMove = true;
+						GameManager.instense.dialogActive = false;
 					}
 					else
 					{
@@ -70,7 +70,7 @@ public class DialogManager : MonoBehaviour
 		NPSBox.SetActive(isNPS);
 
 		justStartet = true;
-		PlayerController.instense.canMove = false;
+		GameManager.instense.dialogActive = true;
 	}
 
 	public void checkName()

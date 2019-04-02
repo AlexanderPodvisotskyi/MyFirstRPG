@@ -37,8 +37,10 @@ public class AreaController : MonoBehaviour
 	{
 		if (other.tag == "Player")
 		{
-			//SceneManager.LoadScene(nextArea);
+			//SceneManager.LoadScene(nextArea)
+			GameManager.instense.fadingBetweenAreas = true;
 			shouldLoadAfterFade = true;
+
 			UIFade.instance.FadeToBlack();
 
 			PlayerController.instense.areaTransitionName = areaTransitionName;
