@@ -21,6 +21,18 @@ public class GameMenu : MonoBehaviour
 
 	public GameObject[] statusButtonsArray;
 
+	public Text statusName;
+	public Text statusHP;
+	public Text statusMP;
+	public Text statusStrength;
+	public Text statusDefence;
+	public Text statusWeaponEquipped;
+	public Text statusWeaponPower;
+	public Text statusArmorEquipped;
+	public Text statusArmorPower;
+	public Text statusExp;
+	public Image statusImage;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -91,12 +103,42 @@ public class GameMenu : MonoBehaviour
 	public void OpenStatus()
 	{
 		UpdateMainStats();
+		StatusPlayersUpdate(0);
 		for (int i = 0; i < statusButtonsArray.Length; i++)
 		{
 			statusButtonsArray[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
 
 			statusButtonsArray[i].GetComponentInChildren<Text>().text = playerStats[i].nameHero;
 		}
+	}
+
+	public void StatusPlayersUpdate(int selectedPlayer)
+	{
+		statusName.text = playerStats[selectedPlayer].nameHero;
+
+		statusHP.text = playerStats[selectedPlayer].currentHP + "/" + playerStats[selectedPlayer].maxHP;
+		statusMP.text = playerStats[selectedPlayer].currentMP + "/" + playerStats[selectedPlayer].maxMP;
+
+		statusStrength.text = playerStats[selectedPlayer].strength.ToString();
+		statusDefence.text = playerStats[selectedPlayer].defence.ToString();
+
+		statusExp.text = (playerStats[selectedPlayer].expToNextLevel[playerStats[selectedPlayer].playerLevel] - playerStats[selectedPlayer].currentExp).ToString();
+
+		statusImage.sprite = playerStats[selectedPlayer].charImage;
+
+		if (playerStats[selectedPlayer].equippedWeapon != "")
+		{
+			statusWeaponEquipped.text = playerStats[selectedPlayer].equippedWeapon;
+		}
+
+		statusWeaponPower.text = playerStats[selectedPlayer].weaponPower.ToString();
+
+		if (playerStats[selectedPlayer].equippedArmor != "")
+		{
+			statusArmorEquipped.text = playerStats[selectedPlayer].equippedArmor;
+		}
+
+		statusArmorPower.text = playerStats[selectedPlayer].armorPower.ToString();
 	}
 
 	public void CloseMenu()
