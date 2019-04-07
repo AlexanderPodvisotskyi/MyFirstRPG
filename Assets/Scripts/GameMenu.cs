@@ -18,6 +18,9 @@ public class GameMenu : MonoBehaviour
 	public GameObject[] charStatHolder;
 	private CharStats[] playerStats;
 
+
+	public GameObject[] statusButtonsArray;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -54,7 +57,7 @@ public class GameMenu : MonoBehaviour
 
 				nameTextArray[i].text = playerStats[i].nameHero;
 				hpTextArray[i].text = "HP: " + playerStats[i].currentHP + "/" + playerStats[i].maxHP;
-				mpTextArray[i].text = "MP: " + playerStats[i].currentMP + "/" +  playerStats[i].maxMP;
+				mpTextArray[i].text = "MP: " + playerStats[i].currentMP + "/" + playerStats[i].maxMP;
 				lvlTextArray[i].text = "Level: " + playerStats[i].playerLevel;
 				expTextArray[i].text = "" + playerStats[i].currentExp + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
 				expSlider[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
@@ -70,6 +73,8 @@ public class GameMenu : MonoBehaviour
 
 	public void ToggleWindow(int windowNumber)
 	{
+		UpdateMainStats();
+
 		for (int i = 0; i < windows.Length; i++)
 		{
 			if (i == windowNumber)
@@ -80,6 +85,17 @@ public class GameMenu : MonoBehaviour
 			{
 				windows[i].SetActive(false);
 			}
+		}
+	}
+
+	public void OpenStatus()
+	{
+		UpdateMainStats();
+		for (int i = 0; i < statusButtonsArray.Length; i++)
+		{
+			statusButtonsArray[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
+
+			statusButtonsArray[i].GetComponentInChildren<Text>().text = playerStats[i].nameHero;
 		}
 	}
 
