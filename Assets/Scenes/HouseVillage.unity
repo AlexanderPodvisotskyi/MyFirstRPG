@@ -1134,7 +1134,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 254827267}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810395797}
+        m_MethodName: StatusPlayersUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &254827267
@@ -6862,7 +6873,7 @@ RectTransform:
   m_Children:
   - {fileID: 1513422501}
   m_Father: {fileID: 1339824184}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6908,7 +6919,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928397795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810395797}
+        m_MethodName: StatusPlayersUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &928397795
@@ -17121,8 +17143,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 928397793}
   - {fileID: 1656220479}
+  - {fileID: 928397793}
   - {fileID: 254827265}
   m_Father: {fileID: 639746777}
   m_RootOrder: 3
@@ -18205,7 +18227,7 @@ RectTransform:
   m_Children:
   - {fileID: 825000364}
   m_Father: {fileID: 1339824184}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18251,7 +18273,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656220481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810395797}
+        m_MethodName: StatusPlayersUpdate
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1656220481
@@ -18644,8 +18677,8 @@ MonoBehaviour:
   - {fileID: 1983920948}
   - {fileID: 1254835837}
   statusButtonsArray:
-  - {fileID: 928397792}
   - {fileID: 1656220478}
+  - {fileID: 928397792}
   - {fileID: 254827264}
   statusName: {fileID: 158277557}
   statusHP: {fileID: 1048696699}
@@ -19130,12 +19163,12 @@ PrefabInstance:
         type: 3}
       propertyPath: playerStats.Array.data[0]
       value: 
-      objectReference: {fileID: 1676644954}
+      objectReference: {fileID: 741933119}
     - target: {fileID: 5897449236253896940, guid: e26ddd02da46e42da8feac4194e70860,
         type: 3}
       propertyPath: playerStats.Array.data[1]
       value: 
-      objectReference: {fileID: 741933119}
+      objectReference: {fileID: 1676644954}
     - target: {fileID: 5400312887837296307, guid: e26ddd02da46e42da8feac4194e70860,
         type: 3}
       propertyPath: nameHero
