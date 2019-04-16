@@ -33,6 +33,8 @@ public class GameMenu : MonoBehaviour
 	public Text statusExp;
 	public Image statusImage;
 
+	public ItemButton[] itemButtonsArray;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -151,5 +153,25 @@ public class GameMenu : MonoBehaviour
 		theMenu.SetActive(false);
 
 		GameManager.instense.gameMenuOpen = false;
+	}
+
+	public void ShowItems()
+	{
+		for (int i = 0; i < itemButtonsArray.Length; i++)
+		{
+			itemButtonsArray[i].buttonValue = i;
+
+			if (GameManager.instense.itemHeldArray[i] != "")
+			{
+				itemButtonsArray[i].buttonImage.gameObject.SetActive(true);
+				itemButtonsArray[i].buttonImage.sprite = GameManager.instense.GetItemDetails(GameManager.instense.itemHeldArray[i]).itemSprite;
+				itemButtonsArray[i].amountText.text = GameManager.instense.numberOfItemsArray[i].ToString();
+			}
+			else
+			{
+				itemButtonsArray[i].buttonImage.gameObject.SetActive(false);
+				itemButtonsArray[i].amountText.text = "";
+			}
+		}
 	}
 }
