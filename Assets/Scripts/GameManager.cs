@@ -33,6 +33,14 @@ public class GameManager : MonoBehaviour
 		{
 			PlayerController.instense.canMove = true;
 		}
+
+		if (Input.GetKeyDown(KeyCode.J))
+		{
+			AddItem("Iron Armor");
+			AddItem("Iron Kick");
+
+			RemoveItem("Health Potion");
+		}
 	}
 
 	public Item GetItemDetails(string itemToGrab)
@@ -74,13 +82,79 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	public void AddItem (string itemToAdd)
+	public void AddItem(string itemToAdd)
 	{
+		int newItemPosition = 0;
+		bool foundSpace = false;
 
+		for (int i = 0; i < itemHeldArray.Length; i++)
+		{
+			if (itemHeldArray[i] == "" || itemHeldArray[i] == itemToAdd)
+			{
+				newItemPosition = i;
+				i = itemHeldArray.Length;
+				foundSpace = true;
+			}
+		}
+
+		if (foundSpace)
+		{
+			bool itemExist = false;
+
+			for (int i = 0; i < referenceItems.Length; i++)
+			{
+				if (referenceItems[i].itemName == itemToAdd)
+				{
+					itemExist = true;
+
+					i = referenceItems.Length;
+				}
+			}
+
+			if (itemExist)
+			{
+				itemHeldArray[newItemPosition] = itemToAdd;
+				numberOfItemsArray[newItemPosition]++;
+			}
+			else
+			{
+				Debug.LogError(itemToAdd + " Does not Exist!");
+			}
+		}
+
+		GameMenu.instance.ShowItems();
 	}
 
 	public void RemoveItem(string itemToRemove)
 	{
+		bool foundItem = false;
+		int ItemPosition = 0;
 
+		for (int i = 0; i < itemHeldArray.Length; i++)
+		{
+			if (itemHeldArray[i] == itemToRemove)
+			{
+				foundItem = true;
+				ItemPosition = i;
+
+				i = itemHeldArray.Length;
+			}
+		}
+
+		if (foundItem)
+		{
+			numberOfItemsArray[ItemPosition]--;
+
+			if (numberOfItemsArray[ItemPosition] <= 0)
+			{
+				itemHeldArray[ItemPosition] = "";
+			}
+
+			GameMenu.instance.ShowItems();
+		}
+		else
+		{
+
+		}
 	}
 }
