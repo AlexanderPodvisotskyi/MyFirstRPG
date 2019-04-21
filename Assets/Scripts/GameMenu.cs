@@ -41,6 +41,9 @@ public class GameMenu : MonoBehaviour
 	public Text itemDescription;
 	public Text useButtonText;
 
+	public GameObject itemCharChoiceMenu;
+	public Text[] itemCharChoiceNames;
+
 	public static GameMenu instance;
 
 	// Start is called before the first frame update
@@ -108,6 +111,8 @@ public class GameMenu : MonoBehaviour
 				windows[i].SetActive(false);
 			}
 		}
+
+		itemCharChoiceMenu.SetActive(false);
 	}
 
 	public void OpenStatus()
@@ -161,6 +166,7 @@ public class GameMenu : MonoBehaviour
 		theMenu.SetActive(false);
 
 		GameManager.instense.gameMenuOpen = false;
+		itemCharChoiceMenu.SetActive(false);
 	}
 
 	public void ShowItems()
@@ -184,7 +190,7 @@ public class GameMenu : MonoBehaviour
 		}
 	}
 
-	public void SelectItem (Item newItem)
+	public void SelectItem(Item newItem)
 	{
 		activeItem = newItem;
 
@@ -200,5 +206,35 @@ public class GameMenu : MonoBehaviour
 
 		itemName.text = activeItem.itemName;
 		itemDescription.text = activeItem.description;
+	}
+
+	public void DiscardItem()
+	{
+		if (activeItem != null)
+		{
+			GameManager.instense.RemoveItem(activeItem.itemName);
+		}
+	}
+
+	public void OpenItemCharacterChoice()
+	{
+		itemCharChoiceMenu.SetActive(true);
+
+		for (int i = 0; i < itemCharChoiceNames.Length; i++)
+		{
+			itemCharChoiceNames[i].text = GameManager.instense.playerStats[i].nameHero;
+			itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instense.playerStats[i].gameObject.activeInHierarchy);
+		}
+	}
+
+	public void CloseItemCharacterChoice()
+	{
+		itemCharChoiceMenu.SetActive(false);
+	}
+
+	public void UseItem(int selectChar)
+	{
+		activeItem.Use(selectChar);
+		CloseItemCharacterChoice(); 
 	}
 }

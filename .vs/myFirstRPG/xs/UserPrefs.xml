@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PickUpItem.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMenu.cs" Line="160" Column="12" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="71" Column="7" />
+      <File FileName="Assets/Scripts/GameMenu.cs" Line="239" Column="3" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="42" Column="32" />
       <File FileName="Assets/Scripts/CameraConroller.cs" Line="34" Column="1" />
       <File FileName="Assets/Scripts/CharStats.cs" Line="7" Column="16" />
-      <File FileName="Assets/Scripts/Item.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/ItemButton.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/Item.cs" Line="92" Column="45" />
+      <File FileName="Assets/Scripts/ItemButton.cs" Line="29" Column="3" />
+      <File FileName="Assets/Scripts/PickUpItem.cs" Line="2" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -16,7 +17,7 @@
     <BreakpointStore>
       <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />
       <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="61" column="1" />
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/GameMenu.cs" relfile="Assets/Scripts/GameMenu.cs" line="66" column="1" />
+      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/GameMenu.cs" relfile="Assets/Scripts/GameMenu.cs" line="77" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
