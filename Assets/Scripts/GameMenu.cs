@@ -34,11 +34,19 @@ public class GameMenu : MonoBehaviour
 	public Image statusImage;
 
 	public ItemButton[] itemButtonsArray;
+	public string selectedItem;
+	public Item activeItem;
+
+	public Text itemName;
+	public Text itemDescription;
+	public Text useButtonText;
+
+	public static GameMenu instance;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		instance = this;
 	}
 
 	// Update is called once per frame
@@ -157,6 +165,7 @@ public class GameMenu : MonoBehaviour
 
 	public void ShowItems()
 	{
+		GameManager.instense.SortItems();
 		for (int i = 0; i < itemButtonsArray.Length; i++)
 		{
 			itemButtonsArray[i].buttonValue = i;
@@ -173,5 +182,23 @@ public class GameMenu : MonoBehaviour
 				itemButtonsArray[i].amountText.text = "";
 			}
 		}
+	}
+
+	public void SelectItem (Item newItem)
+	{
+		activeItem = newItem;
+
+		if (activeItem.isItem)
+		{
+			useButtonText.text = "Use";
+		}
+
+		if (activeItem.isWeapon || activeItem.isArmour)
+		{
+			useButtonText.text = "Equip";
+		}
+
+		itemName.text = activeItem.itemName;
+		itemDescription.text = activeItem.description;
 	}
 }

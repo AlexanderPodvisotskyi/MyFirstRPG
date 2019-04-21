@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +28,7 @@ public class GameManager : MonoBehaviour
 		if (gameMenuOpen || dialogActive || fadingBetweenAreas)
 		{
 			PlayerController.instense.canMove = false;
-		} 
+		}
 		else
 		{
 			PlayerController.instense.canMove = true;
@@ -48,5 +46,41 @@ public class GameManager : MonoBehaviour
 		}
 
 		return null;
+	}
+
+	public void SortItems()
+	{
+		bool itemAfterSpace = true;
+
+		while (itemAfterSpace)
+		{
+			itemAfterSpace = false;
+			for (int i = 0; i < itemHeldArray.Length - 1; i++)
+			{
+				if (itemHeldArray[i] == "")
+				{
+					itemHeldArray[i] = itemHeldArray[i + 1];
+					itemHeldArray[i + 1] = "";
+
+					numberOfItemsArray[i] = numberOfItemsArray[i + 1];
+					numberOfItemsArray[i + 1] = 0;
+
+					if (itemHeldArray[i] != "")
+					{
+						itemAfterSpace = true;
+					}
+				}
+			}
+		}
+	}
+
+	public void AddItem (string itemToAdd)
+	{
+
+	}
+
+	public void RemoveItem(string itemToRemove)
+	{
+
 	}
 }
