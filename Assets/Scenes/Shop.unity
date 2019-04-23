@@ -2914,6 +2914,56 @@ MonoBehaviour:
   - 
   - Iron Sword
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
 --- !u!1 &128748174
 GameObject:
   m_ObjectHideFlags: 0
@@ -21995,7 +22045,189 @@ MonoBehaviour:
   buyMenu: {fileID: 685055929}
   sellMenu: {fileID: 81046388}
   goldText: {fileID: 687632748}
-  ItemsForSale: []
+  ItemsForSale:
+  - 
+  - Iron Sword
+  - 
+  - 
+  - Wooden Sword
+  - 
+  - 
+  - Iron Sword
+  - 
+  - Mana Potion
+  - 
+  - 
+  - Iron Armor
+  - 
+  - 
+  - 
+  - Health Potion
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  buyItemButtonsArray:
+  - {fileID: 1352643583}
+  - {fileID: 753110303}
+  - {fileID: 927787237}
+  - {fileID: 1562914301}
+  - {fileID: 289558973}
+  - {fileID: 631931486}
+  - {fileID: 14338660}
+  - {fileID: 1778386436}
+  - {fileID: 122064549}
+  - {fileID: 2044892229}
+  - {fileID: 377036890}
+  - {fileID: 967010585}
+  - {fileID: 322436557}
+  - {fileID: 1161886144}
+  - {fileID: 1845275884}
+  - {fileID: 1654259545}
+  - {fileID: 1887963613}
+  - {fileID: 941315193}
+  - {fileID: 1826010545}
+  - {fileID: 508007085}
+  - {fileID: 947521481}
+  - {fileID: 99110616}
+  - {fileID: 242979963}
+  - {fileID: 570178631}
+  - {fileID: 1085677825}
+  - {fileID: 1967960496}
+  - {fileID: 2023257327}
+  - {fileID: 1029834167}
+  - {fileID: 1125252214}
+  - {fileID: 1040738827}
+  - {fileID: 1855095137}
+  - {fileID: 1427775043}
+  - {fileID: 482856618}
+  - {fileID: 239129773}
+  - {fileID: 1332766092}
+  - {fileID: 396131246}
+  - {fileID: 980987223}
+  - {fileID: 1247890923}
+  - {fileID: 589413372}
+  - {fileID: 1177292000}
+  - {fileID: 2096881457}
+  - {fileID: 128748176}
+  - {fileID: 744080057}
+  - {fileID: 1318706350}
+  - {fileID: 515250070}
+  - {fileID: 1136806723}
+  - {fileID: 1498678899}
+  - {fileID: 450201317}
+  - {fileID: 1079758220}
+  - {fileID: 40079114}
+  - {fileID: 1356305399}
+  - {fileID: 417312369}
+  - {fileID: 1585600221}
+  - {fileID: 563960125}
+  - {fileID: 1989693185}
+  - {fileID: 1834147989}
+  - {fileID: 1101431582}
+  - {fileID: 547982841}
+  - {fileID: 988092207}
+  - {fileID: 1559676619}
+  sellItemButtonsArray:
+  - {fileID: 247083933}
+  - {fileID: 790469986}
+  - {fileID: 548613614}
+  - {fileID: 327135613}
+  - {fileID: 1232436026}
+  - {fileID: 1008582937}
+  - {fileID: 1877361178}
+  - {fileID: 852566616}
+  - {fileID: 800889042}
+  - {fileID: 919025517}
+  - {fileID: 1735174391}
+  - {fileID: 175421713}
+  - {fileID: 351564733}
+  - {fileID: 1650225978}
+  - {fileID: 1255211699}
+  - {fileID: 1397622348}
+  - {fileID: 1844061510}
+  - {fileID: 724303258}
+  - {fileID: 521185744}
+  - {fileID: 1935636940}
+  - {fileID: 1871314102}
+  - {fileID: 719474508}
+  - {fileID: 1962371743}
+  - {fileID: 651789956}
+  - {fileID: 796725585}
+  - {fileID: 898252769}
+  - {fileID: 1671308887}
+  - {fileID: 1122458229}
+  - {fileID: 608962556}
+  - {fileID: 540276017}
+  - {fileID: 2086359342}
+  - {fileID: 1570176834}
+  - {fileID: 421157383}
+  - {fileID: 726404367}
+  - {fileID: 1742218117}
+  - {fileID: 1242636083}
+  - {fileID: 864279060}
+  - {fileID: 956208761}
+  - {fileID: 1450804197}
+  - {fileID: 845013032}
+  - {fileID: 2066618210}
+  - {fileID: 966543350}
+  - {fileID: 388005856}
+  - {fileID: 450048986}
+  - {fileID: 266215041}
+  - {fileID: 1557120489}
+  - {fileID: 1449299435}
+  - {fileID: 1181230961}
+  - {fileID: 1615664418}
+  - {fileID: 1990013137}
+  - {fileID: 1469169207}
+  - {fileID: 1103829900}
+  - {fileID: 1139008193}
+  - {fileID: 485580970}
+  - {fileID: 1915566473}
+  - {fileID: 2053473114}
+  - {fileID: 1197453385}
+  - {fileID: 1654190379}
+  - {fileID: 1032059499}
+  - {fileID: 773867247}
 --- !u!224 &1039514726 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7900954554099124003, guid: 79c14190899b64fa7a525edb6ef18c72,
