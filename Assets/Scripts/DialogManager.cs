@@ -16,12 +16,14 @@ public class DialogManager : MonoBehaviour
 
 	public static DialogManager instance;
 
+	private string questToMark;
+	private bool markQuestComplete;
+	private bool shouldMarkQuest;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		instance = this;
-
-		// dialogText.text = dialogLinesArray[currentLine];
 	}
 
 	// Update is called once per frame
@@ -40,6 +42,20 @@ public class DialogManager : MonoBehaviour
 						DialogBox.SetActive(false);
 
 						GameManager.instense.dialogActive = false;
+
+						if (shouldMarkQuest)
+						{
+							shouldMarkQuest = false;
+
+							if (markQuestComplete)
+							{
+								QuestManager.instance.MarkQuestComplete(questToMark);
+							}
+							else
+							{
+								QuestManager.instance.MarkQuestIncomplete(questToMark);
+							}
+						}
 					}
 					else
 					{
@@ -80,5 +96,13 @@ public class DialogManager : MonoBehaviour
 			nameNPSText.text = dialogLinesArray[currentLine].Replace("n-", "");
 			currentLine++;
 		}
+	}
+
+	public void ShouldActivateQuestAtEnd(string questName, bool markComplete)
+	{
+		questToMark = questName;
+		markQuestComplete = markComplete;
+
+		shouldMarkQuest = true;
 	}
 }
