@@ -14,7 +14,9 @@ public class CameraConroller : MonoBehaviour
 	private float halfHeigth;
 	private float halfWidth;
 
+	public int musicToPlay;
 
+	private bool musicStarted;
 	// Start is called before the first fr4ame update
 	void Start()
 	{
@@ -36,5 +38,11 @@ public class CameraConroller : MonoBehaviour
 
 		// Keep camera inside the bounds
 		transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
+
+		if (!musicStarted)
+		{
+			musicStarted = true;
+			AudioManager.instance.PlayBackgroundMusic(musicToPlay);
+		}
 	}
 }

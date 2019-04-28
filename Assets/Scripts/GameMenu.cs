@@ -68,6 +68,8 @@ public class GameMenu : MonoBehaviour
 				UpdateMainStats();
 				GameManager.instense.gameMenuOpen = true;
 			}
+
+			AudioManager.instance.PlaySoundEffects(6);
 		}
 	}
 
@@ -246,4 +248,10 @@ public class GameMenu : MonoBehaviour
 		GameManager.instense.SaveData();
 		QuestManager.instance.SaveQuestData();
 	}
+
+	public void playButtonSound()
+	{
+		AudioManager.instance.PlaySoundEffects(5);
+	}
+
 }

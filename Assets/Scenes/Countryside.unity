@@ -194,16 +194,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4973183093992152064, guid: adc5bf7d60b214fc28a6e76b46518a2d,
-        type: 3}
-      propertyPath: areaTransitionName
-      value: Countryside-1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4973183093992152064, guid: adc5bf7d60b214fc28a6e76b46518a2d,
-        type: 3}
-      propertyPath: nextArea
-      value: HouseVillage
-      objectReference: {fileID: 0}
     - target: {fileID: 1744759773, guid: adc5bf7d60b214fc28a6e76b46518a2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.47
@@ -219,6 +209,21 @@ PrefabInstance:
     - target: {fileID: 1744759773, guid: adc5bf7d60b214fc28a6e76b46518a2d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973183093992152064, guid: adc5bf7d60b214fc28a6e76b46518a2d,
+        type: 3}
+      propertyPath: areaTransitionName
+      value: HouseVillage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973183093992152064, guid: adc5bf7d60b214fc28a6e76b46518a2d,
+        type: 3}
+      propertyPath: nextArea
+      value: HouseVillage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214863209552853166, guid: adc5bf7d60b214fc28a6e76b46518a2d,
+        type: 3}
+      propertyPath: transitionName
+      value: HouseVillage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc5bf7d60b214fc28a6e76b46518a2d, type: 3}
@@ -3719,6 +3724,11 @@ PrefabInstance:
       propertyPath: theMap
       value: 
       objectReference: {fileID: 1058542491}
+    - target: {fileID: 5758832549501471057, guid: 7d5c4c08766944462b9ad1e44fd95282,
+        type: 3}
+      propertyPath: musicToPlay
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5758832549501471056, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
       propertyPath: orthographic size
