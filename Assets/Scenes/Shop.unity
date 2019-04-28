@@ -1361,7 +1361,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64928665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039514720}
+        m_MethodName: SellItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &64928665
@@ -2904,15 +2915,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsForSale:
-  - Health Potion
-  - Iron Armour
-  - Leather Armour
+  - Iron Armor
+  - Iron Armor
+  - Leather Armor
   - Mana Potion
-  - Wood Sword
+  - Wooden Sword
   - 
   - Mana Potion
-  - 
   - Iron Sword
+  - 
   - 
   - 
   - 
@@ -8854,7 +8865,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430782199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1039514720}
+        m_MethodName: BuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &430782199
@@ -22045,67 +22067,7 @@ MonoBehaviour:
   buyMenu: {fileID: 685055929}
   sellMenu: {fileID: 81046388}
   goldText: {fileID: 687632748}
-  ItemsForSale:
-  - 
-  - Iron Sword
-  - 
-  - 
-  - Wooden Sword
-  - 
-  - 
-  - Iron Sword
-  - 
-  - Mana Potion
-  - 
-  - 
-  - Iron Armor
-  - 
-  - 
-  - 
-  - Health Potion
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  ItemsForSale: []
   buyItemButtonsArray:
   - {fileID: 1352643583}
   - {fileID: 753110303}
@@ -22228,6 +22190,13 @@ MonoBehaviour:
   - {fileID: 1654190379}
   - {fileID: 1032059499}
   - {fileID: 773867247}
+  selectedItem: {fileID: 0}
+  buyItemName: {fileID: 404074358}
+  buyItemValue: {fileID: 2110855432}
+  buyItemDescription: {fileID: 1448996265}
+  sellItemName: {fileID: 902094409}
+  sellItemValue: {fileID: 315397496}
+  sellItemDescription: {fileID: 1669175189}
 --- !u!224 &1039514726 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7900954554099124003, guid: 79c14190899b64fa7a525edb6ef18c72,

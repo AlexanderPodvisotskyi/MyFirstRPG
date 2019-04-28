@@ -17,6 +17,16 @@ public class Shop : MonoBehaviour
 	public ItemButton[] buyItemButtonsArray;
 	public ItemButton[] sellItemButtonsArray;
 
+	public Item selectedItem;
+
+	public Text buyItemName;
+	public Text buyItemValue;
+	public Text buyItemDescription;
+
+	public Text sellItemName;
+	public Text sellItemValue;
+	public Text sellItemDescription;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -51,6 +61,8 @@ public class Shop : MonoBehaviour
 
 	public void OpenBuyMenu()
 	{
+		buyItemButtonsArray[0].Press();
+
 		buyMenu.SetActive(true);
 		sellMenu.SetActive(false);
 
@@ -76,9 +88,16 @@ public class Shop : MonoBehaviour
 
 	public void OpenSellMenu()
 	{
+		buyItemButtonsArray[0].Press();
+
 		sellMenu.SetActive(true);
 		buyMenu.SetActive(false);
 
+		ShowSellItems();
+	}
+
+	private void ShowSellItems()
+	{
 		GameManager.instense.SortItems();
 
 		for (int i = 0; i < sellItemButtonsArray.Length; i++)
@@ -89,7 +108,7 @@ public class Shop : MonoBehaviour
 			{
 				sellItemButtonsArray[i].buttonImage.gameObject.SetActive(true);
 				sellItemButtonsArray[i].buttonImage.sprite = GameManager.instense.GetItemDetails(GameManager.instense.itemHeldArray[i]).itemSprite;
-				sellItemButtonsArray[i].amountText.text = "";
+				sellItemButtonsArray[i].amountText.text = GameManager.instense.numberOfItemsArray[i].ToString();
 			}
 			else
 			{
@@ -97,5 +116,55 @@ public class Shop : MonoBehaviour
 				sellItemButtonsArray[i].amountText.text = "";
 			}
 		}
+	}
+
+	public void SelectBuyItem(Item buyItem)
+	{
+		if (buyItem)
+		{
+			selectedItem = buyItem;
+			buyItemName.text = selectedItem.itemName;
+			buyItemDescription.text = selectedItem.description;
+			buyItemValue.text = "Value: " + selectedItem.value + "g";
+		}
+	}
+
+	public void SelectSellItem(Item sellItem)
+	{
+		if (sellItem)
+		{
+			selectedItem = sellItem;
+			sellItemName.text = selectedItem.itemName;
+			sellItemDescription.text = selectedItem.description;
+			sellItemValue.text = "Value: " + Mathf.FloorToInt(selectedItem.value * 0.5f).ToString() + "g";
+		}
+	}
+
+	public void BuyItem()
+	{
+		if (selectedItem != null)
+		{
+			if (GameManager.instense.currentGold >= selectedItem.value)
+			{
+				GameManager.instense.currentGold -= selectedItem.value;
+
+				GameManager.instense.AddItem(selectedItem.itemName);
+			}
+		}
+		goldText.text = GameManager.instense.currentGold.ToString() + "g";
+	}
+
+	public void SellItem()
+	{
+		if (selectedItem != null)
+		{
+			GameManager.instense.currentGold += Mathf.FloorToInt(selectedItem.value * 0.5f);
+
+			GameManager.instense.RemoveItem(selectedItem.itemName);
+		}
+
+		goldText.text = GameManager.instense.currentGold.ToString() + "g";
+
+		ShowSellItems();
 	}
 }
