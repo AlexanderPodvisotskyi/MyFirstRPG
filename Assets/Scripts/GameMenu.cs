@@ -238,6 +238,12 @@ public class GameMenu : MonoBehaviour
 	public void UseItem(int selectChar)
 	{
 		activeItem.Use(selectChar);
-		CloseItemCharacterChoice(); 
+		CloseItemCharacterChoice();
+	}
+
+	public void SaveGame()
+	{
+		GameManager.instense.SaveData();
+		QuestManager.instance.SaveQuestData();
 	}
 }

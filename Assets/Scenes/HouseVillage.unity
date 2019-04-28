@@ -3683,6 +3683,9 @@ MonoBehaviour:
   - n- Little Woman
   - Comming soon...
   isNPS: 1
+  shouldActivateQuest: 1
+  questToMark: Quest test
+  markComplete: 1
 --- !u!61 &1026714911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10432,6 +10435,9 @@ MonoBehaviour:
   lines:
   - Woman House
   isNPS: 0
+  shouldActivateQuest: 0
+  questToMark: 
+  markComplete: 0
 --- !u!61 &1086252765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12281,7 +12287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &2021986037
 BoxCollider2D:
   m_ObjectHideFlags: 0

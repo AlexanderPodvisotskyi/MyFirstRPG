@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogManager.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Assets/Scripts/GameMenu.cs" Line="37" Column="16" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="39" Column="4" />
@@ -15,11 +15,11 @@
       <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="19" Column="73" />
       <File FileName="Assets/Scripts/Shop.cs" Line="140" Column="4" />
       <File FileName="Assets/Scripts/ShopKeeper.cs" Line="7" Column="46" />
-      <File FileName="Assets/Scripts/DialogActivator.cs" Line="20" Column="54" />
-      <File FileName="Assets/Scripts/QuestManager.cs" Line="78" Column="3" />
+      <File FileName="Assets/Scripts/DialogActivator.cs" Line="21" Column="12" />
+      <File FileName="Assets/Scripts/QuestManager.cs" Line="86" Column="10" />
       <File FileName="Assets/Scripts/QuestObjectActivator.cs" Line="26" Column="4" />
       <File FileName="Assets/Scripts/QuestMarker.cs" Line="15" Column="46" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="19" Column="22" />
+      <File FileName="Assets/Scripts/DialogManager.cs" Line="101" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
