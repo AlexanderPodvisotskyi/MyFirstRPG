@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class GameMenu : MonoBehaviour
 	public Text[] itemCharChoiceNames;
 
 	public static GameMenu instance;
+
+	public string mainMenuName;
 
 	public Text goldText;
 	// Start is called before the first frame update
@@ -254,4 +257,13 @@ public class GameMenu : MonoBehaviour
 		AudioManager.instance.PlaySoundEffects(5);
 	}
 
+	public void QuitGame()
+	{
+		SceneManager.LoadScene(mainMenuName);
+
+		Destroy(GameManager.instense.gameObject);
+		Destroy(PlayerController.instense.gameObject);
+		Destroy(AudioManager.instance.gameObject);
+		Destroy(gameObject);
+	}
 }
