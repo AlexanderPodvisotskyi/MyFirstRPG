@@ -1,29 +1,19 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMenu.cs" Line="267" Column="11" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="40" Column="4" />
-      <File FileName="Assets/Scripts/CameraConroller.cs" Line="37" Column="1" />
-      <File FileName="Assets/Scripts/CharStats.cs" Line="7" Column="16" />
-      <File FileName="Assets/Scripts/Item.cs" Line="92" Column="45" />
-      <File FileName="Assets/Scripts/ItemButton.cs" Line="42" Column="120" />
-      <File FileName="Assets/Scripts/PickUpItem.cs" Line="19" Column="24" />
-      <File FileName="Library/PackageCache/com.unity.textmeshpro@1.3.0/LICENSE.md" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="86" Column="62" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="36" Column="1" />
       <File FileName="Assets/Scripts/AreaEntrance.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/PlayerLoader.cs" Line="11" Column="24" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="3" Column="14" />
-      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="31" Column="30" />
-      <File FileName="Assets/Scripts/Shop.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/ShopKeeper.cs" Line="23" Column="3" />
-      <File FileName="Assets/Scripts/DialogActivator.cs" Line="21" Column="12" />
-      <File FileName="Assets/Scripts/QuestManager.cs" Line="29" Column="7" />
-      <File FileName="Assets/Scripts/QuestObjectActivator.cs" Line="26" Column="4" />
-      <File FileName="Assets/Scripts/QuestMarker.cs" Line="15" Column="46" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="103" Column="27" />
-      <File FileName="Assets/Scripts/AudioManager.cs" Line="36" Column="39" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="32" Column="41" />
-      <File FileName="Assets/Scripts/LoadingScene.cs" Line="27" Column="4" />
-      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="5" Column="10" />
+      <File FileName="Assets/Scripts/AreaController.cs" Line="16" Column="1" />
+      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="36" Column="6" />
+      <File FileName="Assets/Scripts/CameraConroller.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="15" Column="32" />
+      <File FileName="Assets/Scripts/UIFade.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/DialogManager.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/GameMenu.cs" Line="61" Column="1" />
+      <File FileName="Assets/Scripts/QuestManager.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/CharStats.cs" Line="48" Column="1" />
+      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="3" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -34,6 +24,8 @@
       <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />
       <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="61" column="1" />
       <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/ShopKeeper.cs" relfile="Assets/Scripts/ShopKeeper.cs" line="17" column="1" />
+      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/AreaEntrance.cs" relfile="Assets/Scripts/AreaEntrance.cs" line="16" column="1" />
+      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="12" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

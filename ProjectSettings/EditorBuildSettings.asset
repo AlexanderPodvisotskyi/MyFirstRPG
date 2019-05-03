@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7b06d69d9526140bc883b1213ca06ed3
   - enabled: 1
+    path: Assets/Scenes/HouseVillage.unity
+    guid: 02a7a90240d8a40018980f41427ff8f4
+  - enabled: 1
     path: Assets/Scenes/Countryside.unity
     guid: b0eb02b5b3c4d44c2b0d2b78ed59f884
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 67d860c63f1b44fd5bfc23cc5f29c5c8
-  - enabled: 1
-    path: Assets/Scenes/HouseVillage.unity
-    guid: 02a7a90240d8a40018980f41427ff8f4
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
     guid: 6f180aea5367a409bbb0a1014db3ff86
