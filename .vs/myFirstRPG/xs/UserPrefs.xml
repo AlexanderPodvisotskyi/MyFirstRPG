@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AreaEntrance.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleCharacter.cs">
     <Files>
       <File FileName="Assets/Scripts/GameMenu.cs" Line="267" Column="11" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="40" Column="4" />
@@ -23,6 +23,7 @@
       <File FileName="Assets/Scripts/AudioManager.cs" Line="36" Column="39" />
       <File FileName="Assets/Scripts/MainMenu.cs" Line="32" Column="41" />
       <File FileName="Assets/Scripts/LoadingScene.cs" Line="27" Column="4" />
+      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="5" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
