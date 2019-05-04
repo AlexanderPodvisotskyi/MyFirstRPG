@@ -93,7 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  movesAvailable: []
+  movesAvailable:
+  - Slash
+  - Ice
   characterName: Spider
   currentHP: 250
   maxHP: 300

@@ -93,7 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  movesAvailable: []
+  movesAvailable:
+  - Slash
+  - FIre
   characterName: Goblin
   currentHP: 400
   maxHP: 500

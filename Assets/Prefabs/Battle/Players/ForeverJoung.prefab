@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8795454436e4d9fa2faa5059b8efce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 0
+  isPlayer: 1
   movesAvailable: []
   characterName: Artem (Forever Young)
   currentHP: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BattleManager : MonoBehaviour
@@ -18,6 +19,13 @@ public class BattleManager : MonoBehaviour
 
 	public List<BattleCharacter> activeBattlers = new List<BattleCharacter>();
 
+	public int currentTurn;
+	public bool turnWaiting;
+
+	public GameObject uiButtonsHolder;
+
+	public BattleMove[] movesList;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -30,8 +38,29 @@ public class BattleManager : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.L))
 		{
-			Debug.Log("Work");
-			BattleStart(new string[] { "Goblin", "Spider", "Goblin", "Goblin", "Goblin" });
+			BattleStart(new string[] { "Goblin", "Spider" });
+		}
+
+		if (battleActive)
+		{
+			if (turnWaiting)
+			{
+				if (activeBattlers[currentTurn].isPlayer)
+				{
+					uiButtonsHolder.SetActive(true);
+				}
+				else
+				{
+					uiButtonsHolder.SetActive(false);
+
+					StartCoroutine(EnemyMoveCo());
+				}
+			}
+
+			if (Input.GetKeyDown(KeyCode.N))
+			{
+				NextTurn();
+			}
 		}
 	}
 
@@ -89,6 +118,106 @@ public class BattleManager : MonoBehaviour
 						}
 					}
 				}
+			}
+		}
+
+		turnWaiting = true;
+		currentTurn = Random.Range(0, activeBattlers.Count);
+	}
+
+	public void NextTurn()
+	{
+		currentTurn++;
+		if (currentTurn >= activeBattlers.Count)
+		{
+			currentTurn = 0;
+		}
+
+		turnWaiting = true;
+		UpdateBattle();
+	}
+
+	public void UpdateBattle()
+	{
+		bool allEnemiesDead = true;
+		bool allPlayersDead = true;
+
+		for (int i = 0; i < activeBattlers.Count; i++)
+		{
+			if (activeBattlers[i].currentHP < 0)
+			{
+				activeBattlers[i].currentHP = 0;
+			}
+
+			if (activeBattlers[i].currentHP == 0)
+			{
+
+			}
+			else
+			{
+				if (activeBattlers[i].isPlayer)
+				{
+					allPlayersDead = false;
+				}
+				else
+				{
+					allEnemiesDead = false;
+				}
+			}
+		}
+
+		if (allEnemiesDead || allPlayersDead)
+		{
+			if (allEnemiesDead)
+			{
+				// Victory battle
+			}
+			else
+			{
+				// Fail battle
+			}
+
+			BattleScene.SetActive(false);
+			GameManager.instense.battleActive = false;
+			battleActive = false;
+		}
+	}
+
+	public IEnumerator EnemyMoveCo()
+	{
+		turnWaiting = false;
+
+		yield return new WaitForSeconds(1f);
+
+		EnemyAttack();
+
+		yield return new WaitForSeconds(1f);
+
+		NextTurn();
+	}
+
+	public void EnemyAttack()
+	{
+		List<int> players = new List<int>();
+
+		for (int i = 0; i < activeBattlers.Count; i++)
+		{
+			if (activeBattlers[i].isPlayer && activeBattlers[i].currentHP > 0)
+			{
+				players.Add(i);
+			}
+		}
+
+		int selectedTarger = players[Random.Range(0, players.Count)];
+
+
+		int selectAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
+
+		for (int i = 0; i < movesList.Length; i++)
+		{
+			if (movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectAttack])
+			{
+				Instantiate(movesList[i].theEffect, activeBattlers[selectedTarger].transform.position, activeBattlers[selectedTarger].transform.rotation);
 			}
 		}
 	}
