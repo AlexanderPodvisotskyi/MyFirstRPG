@@ -93,7 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  movesAvailable: []
+  movesAvailable:
+  - Slash
+  - Fire
+  - Ice
   characterName: Artem (Forever Young)
   currentHP: 0
   maxHP: 0
