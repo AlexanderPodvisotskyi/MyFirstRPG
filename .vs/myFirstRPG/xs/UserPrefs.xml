@@ -1,23 +1,8 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DamageNumber.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/BattleManager.cs" Line="250" Column="18" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/AreaController.cs" Line="16" Column="1" />
-      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="36" Column="6" />
-      <File FileName="Assets/Scripts/CameraConroller.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="15" Column="32" />
-      <File FileName="Assets/Scripts/UIFade.cs" Line="22" Column="1" />
-      <File FileName="Assets/Scripts/DialogManager.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/GameMenu.cs" Line="61" Column="1" />
-      <File FileName="Assets/Scripts/QuestManager.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/CharStats.cs" Line="48" Column="1" />
-      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="22" Column="22" />
-      <File FileName="Assets/Scripts/AttackEffect.cs" Line="16" Column="37" />
-      <File FileName="Assets/Scripts/BattleMove.cs" Line="3" Column="22" />
-      <File FileName="Assets/Scripts/DestroyOverLiftime.cs" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/DamageNumber.cs" Line="2" Column="8" />
+      <File FileName="Assets/Scripts/BattleTargetsButton.cs" Line="26" Column="70" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="333" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
