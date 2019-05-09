@@ -128,10 +128,11 @@ public class BattleManager : MonoBehaviour
 					}
 				}
 			}
-		}
+			turnWaiting = true;
+			currentTurn = Random.Range(0, activeBattlers.Count);
 
-		turnWaiting = true;
-		currentTurn = Random.Range(0, activeBattlers.Count);
+			UpdateUIStats();
+		}
 	}
 
 	public void NextTurn()
@@ -144,6 +145,7 @@ public class BattleManager : MonoBehaviour
 
 		turnWaiting = true;
 		UpdateBattle();
+		UpdateUIStats();
 	}
 
 	public void UpdateBattle()
@@ -189,6 +191,17 @@ public class BattleManager : MonoBehaviour
 			BattleScene.SetActive(false);
 			GameManager.instense.battleActive = false;
 			battleActive = false;
+		}
+		else
+		{
+			while (activeBattlers[currentTurn].currentHP == 0)
+			{
+				currentTurn++;
+				if (currentTurn >= activeBattlers.Count)
+				{
+					currentTurn = 0;
+				}
+			}
 		}
 	}
 
@@ -250,6 +263,8 @@ public class BattleManager : MonoBehaviour
 		activeBattlers[target].currentHP -= damageToGive;
 
 		Instantiate(theDamageNumber, activeBattlers[target].transform.position, activeBattlers[target].transform.rotation).SetDamage(damageToGive);
+
+		UpdateUIStats();
 	}
 
 	public void UpdateUIStats()
@@ -265,8 +280,8 @@ public class BattleManager : MonoBehaviour
 					playerName[i].gameObject.SetActive(true);
 
 					playerName[i].text = playerData.characterName;
-					playerHP[i].text = playerData.currentHP + "/" + playerData.maxHP;
-					playerMP[i].text = playerData.currentMP + "/" + playerData.maxMP;
+					playerHP[i].text = Mathf.Clamp(playerData.currentHP, 0, int.MaxValue) + "/" + playerData.maxHP;
+					playerMP[i].text = Mathf.Clamp(playerData.currentMP, 0, int.MaxValue) + "/" + playerData.maxMP;
 				}
 				else
 				{
