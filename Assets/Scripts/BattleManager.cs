@@ -230,7 +230,7 @@ public class BattleManager : MonoBehaviour
 			}
 		}
 
-		int selectedTarger = players[Random.Range(0, players.Count)];
+		int selectedTarget = players[Random.Range(0, players.Count)];
 
 		int selectAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
 		int movePower = 0;
@@ -239,14 +239,14 @@ public class BattleManager : MonoBehaviour
 		{
 			if (movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectAttack])
 			{
-				Instantiate(movesList[i].theEffect, activeBattlers[selectedTarger].transform.position, activeBattlers[selectedTarger].transform.rotation);
+				Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
 				movePower = movesList[i].movePower;
 			}
 		}
 
 		Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[currentTurn].transform.rotation);
 
-		DealDamage(selectedTarger, movePower);
+		DealDamage(selectedTarget, movePower);
 	}
 
 	public void DealDamage(int target, int movePower)
@@ -293,5 +293,28 @@ public class BattleManager : MonoBehaviour
 				playerName[i].gameObject.SetActive(false);
 			}
 		}
+	}
+
+	public void PlayerAttack(string moveName /*, int selectedTarget */)
+	{
+		int selectedTarget = 2;
+
+		int movePower = 0;
+
+		for (int i = 0; i < movesList.Length; i++)
+		{
+			if (movesList[i].moveName == moveName)
+			{
+				Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
+				movePower = movesList[i].movePower;
+			}
+		}
+
+		Instantiate(enemyAttackEffect, activeBattlers[currentTurn].transform.position, activeBattlers[currentTurn].transform.rotation);
+
+		DealDamage(selectedTarget, movePower);
+
+		uiButtonsHolder.SetActive(false);
+		NextTurn();
 	}
 }
