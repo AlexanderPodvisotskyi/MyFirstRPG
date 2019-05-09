@@ -44,6 +44,8 @@ public class BattleManager : MonoBehaviour
 
 	public BattleNotification battleNotice;
 
+	public int chanceToFlee = 50;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -385,6 +387,26 @@ public class BattleManager : MonoBehaviour
 			{
 				magicButtons[i].gameObject.SetActive(false);
 			}
+		}
+	}
+
+	public void Flee()
+	{
+		int fleeSuccess = Random.Range(0, 100);
+
+		Debug.Log(fleeSuccess);
+
+		if (fleeSuccess < chanceToFlee)
+		{
+			battleActive = false;
+			BattleScene.SetActive(false);
+		}
+		else
+		{
+			NextTurn();
+
+			battleNotice.theText.text = "Not today, maybe next turn";
+			battleNotice.Activate();
 		}
 	}
 }
