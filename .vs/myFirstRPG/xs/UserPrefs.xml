@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyOverLiftime.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DamageNumber.cs">
     <Files>
-      <File FileName="Assets/Scripts/BattleManager.cs" Line="223" Column="4" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="250" Column="18" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="36" Column="1" />
       <File FileName="Assets/Scripts/AreaEntrance.cs" Line="16" Column="1" />
       <File FileName="Assets/Scripts/AreaController.cs" Line="16" Column="1" />
@@ -16,7 +16,8 @@
       <File FileName="Assets/Scripts/BattleCharacter.cs" Line="22" Column="22" />
       <File FileName="Assets/Scripts/AttackEffect.cs" Line="16" Column="37" />
       <File FileName="Assets/Scripts/BattleMove.cs" Line="3" Column="22" />
-      <File FileName="Assets/Scripts/DestroyOverLiftime.cs" Line="16" Column="6" />
+      <File FileName="Assets/Scripts/DestroyOverLiftime.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/DamageNumber.cs" Line="2" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

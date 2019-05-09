@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleManager : MonoBehaviour
 {
@@ -27,6 +28,12 @@ public class BattleManager : MonoBehaviour
 	public BattleMove[] movesList;
 
 	public GameObject enemyAttackEffect;
+
+	public DamageNumber theDamageNumber;
+
+	public Text[] playerName;
+	public Text[] playerHP;
+	public Text[] playerMP;
 
 	// Start is called before the first frame update
 	void Start()
@@ -241,5 +248,35 @@ public class BattleManager : MonoBehaviour
 		Debug.Log(activeBattlers[currentTurn].characterName + " Is dealing " + damageCalc + "(" + damageToGive + ") damage to " + activeBattlers[target].characterName);
 
 		activeBattlers[target].currentHP -= damageToGive;
+
+		Instantiate(theDamageNumber, activeBattlers[target].transform.position, activeBattlers[target].transform.rotation).SetDamage(damageToGive);
+	}
+
+	public void UpdateUIStats()
+	{
+		for (int i = 0; i < playerName.Length; i++)
+		{
+			if (activeBattlers.Count > i)
+			{
+				if (activeBattlers[i].isPlayer)
+				{
+					BattleCharacter playerData = activeBattlers[i];
+
+					playerName[i].gameObject.SetActive(true);
+
+					playerName[i].text = playerData.characterName;
+					playerHP[i].text = playerData.currentHP + "/" + playerData.maxHP;
+					playerMP[i].text = playerData.currentMP + "/" + playerData.maxMP;
+				}
+				else
+				{
+					playerName[i].gameObject.SetActive(false);
+				}
+			}
+			else
+			{
+				playerName[i].gameObject.SetActive(false);
+			}
+		}
 	}
 }
