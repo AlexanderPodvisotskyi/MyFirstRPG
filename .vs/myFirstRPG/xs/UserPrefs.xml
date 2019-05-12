@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleNotification.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleManager.cs">
     <Files>
       <File FileName="Assets/Scripts/BattleTargetsButton.cs" Line="26" Column="70" />
-      <File FileName="Assets/Scripts/BattleManager.cs" Line="378" Column="76" />
-      <File FileName="Assets/Scripts/BattleMagicSelect.cs" Line="34" Column="45" />
-      <File FileName="Assets/Scripts/BattleNotification.cs" Line="6" Column="7" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="88" Column="3" />
+      <File FileName="Assets/Scripts/BattleMagicSelect.cs" Line="38" Column="3" />
+      <File FileName="Assets/Scripts/BattleNotification.cs" Line="29" Column="4" />
+      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="48" Column="9" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="43" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -173,13 +173,21 @@ public class BattleManager : MonoBehaviour
 
 			if (activeBattlers[i].currentHP == 0)
 			{
-
+				if (activeBattlers[i].isPlayer)
+				{
+					activeBattlers[i].theSprite.sprite = activeBattlers[i].deadSprite;
+				}
+				else
+				{
+					activeBattlers[i].EnemyFade();
+				}
 			}
 			else
 			{
 				if (activeBattlers[i].isPlayer)
 				{
 					allPlayersDead = false;
+					activeBattlers[i].theSprite.sprite = activeBattlers[i].aliveSprite;
 				}
 				else
 				{
@@ -193,15 +201,16 @@ public class BattleManager : MonoBehaviour
 			if (allEnemiesDead)
 			{
 				// Victory battle
+				StartCoroutine(EndBattleCo());
 			}
 			else
 			{
 				// Fail battle
 			}
 
-			BattleScene.SetActive(false);
-			GameManager.instense.battleActive = false;
-			battleActive = false;
+			//BattleScene.SetActive(false);
+			//GameManager.instense.battleActive = false;
+			//battleActive = false;
 		}
 		else
 		{
@@ -346,7 +355,7 @@ public class BattleManager : MonoBehaviour
 
 		for (int i = 0; i < targetButtons.Length; i++)
 		{
-			if (Enemies.Count > i)
+			if (Enemies.Count > i && activeBattlers[Enemies[i]].currentHP > 0)
 			{
 				targetButtons[i].gameObject.SetActive(true);
 
@@ -398,8 +407,9 @@ public class BattleManager : MonoBehaviour
 
 		if (fleeSuccess < chanceToFlee)
 		{
-			battleActive = false;
-			BattleScene.SetActive(false);
+			//battleActive = false;
+			//BattleScene.SetActive(false);
+			StartCoroutine(EndBattleCo());
 		}
 		else
 		{
@@ -408,5 +418,46 @@ public class BattleManager : MonoBehaviour
 			battleNotice.theText.text = "Not today, maybe next turn";
 			battleNotice.Activate();
 		}
+	}
+
+	public IEnumerator EndBattleCo()
+	{
+		battleActive = false;
+		uiButtonsHolder.SetActive(false);
+		targetMenu.SetActive(false);
+		magicMenu.SetActive(false);
+
+		yield return new WaitForSeconds(.5f);
+
+		UIFade.instance.FadeToBlack();
+
+		yield return new WaitForSeconds(1.5f);
+
+		for (int i = 0; i < activeBattlers.Count; i++)
+		{
+			if (activeBattlers[i].isPlayer)
+			{
+				for (int j = 0; j < GameManager.instense.playerStats.Length; j++)
+				{
+					if (activeBattlers[i].characterName == GameManager.instense.playerStats[j].nameHero)
+					{
+						GameManager.instense.playerStats[j].currentHP = activeBattlers[i].currentHP;
+						GameManager.instense.playerStats[j].currentMP = activeBattlers[i].currentMP;
+					}
+				}
+			}
+			Destroy(activeBattlers[i].gameObject);
+		}
+
+		UIFade.instance.FadeFromBlack();
+		BattleScene.SetActive(false);
+
+		activeBattlers.Clear();
+		currentTurn = 0;
+
+		GameManager.instense.battleActive = false;
+
+
+		AudioManager.instance.PlayBackgroundMusic(FindObjectOfType<CameraConroller>().musicToPlay);
 	}
 }
