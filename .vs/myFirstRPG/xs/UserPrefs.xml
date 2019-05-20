@@ -1,14 +1,16 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleReward.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleStarter.cs">
     <Files>
       <File FileName="Assets/Scripts/BattleTargetsButton.cs" Line="26" Column="70" />
-      <File FileName="Assets/Scripts/BattleManager.cs" Line="474" Column="32" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="474" Column="4" />
       <File FileName="Assets/Scripts/BattleMagicSelect.cs" Line="38" Column="3" />
       <File FileName="Assets/Scripts/BattleNotification.cs" Line="29" Column="4" />
       <File FileName="Assets/Scripts/BattleCharacter.cs" Line="48" Column="9" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="43" Column="1" />
       <File FileName="Assets/Scripts/GameOver.cs" Line="15" Column="1" />
-      <File FileName="Assets/Scripts/BattleReward.cs" Line="2" Column="19" />
+      <File FileName="Assets/Scripts/BattleReward.cs" Line="39" Column="4" />
+      <File FileName="Assets/Scripts/BattleType.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/BattleStarter.cs" Line="6" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -16,11 +18,11 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="61" column="1" />
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/ShopKeeper.cs" relfile="Assets/Scripts/ShopKeeper.cs" line="17" column="1" />
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/AreaEntrance.cs" relfile="Assets/Scripts/AreaEntrance.cs" line="16" column="1" />
-      <Breakpoint file="/Users/Alexander/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="12" column="1" />
+      <Breakpoint file="/Users/Main/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />
+      <Breakpoint file="/Users/Main/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="61" column="1" />
+      <Breakpoint file="/Users/Main/MyFirstRPG/Assets/Scripts/ShopKeeper.cs" relfile="Assets/Scripts/ShopKeeper.cs" line="17" column="1" />
+      <Breakpoint file="/Users/Main/MyFirstRPG/Assets/Scripts/AreaEntrance.cs" relfile="Assets/Scripts/AreaEntrance.cs" line="16" column="1" />
+      <Breakpoint file="/Users/Main/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="12" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

@@ -2495,6 +2495,12 @@ MonoBehaviour:
   - {fileID: 5982217720880125285}
   battleNotice: {fileID: 5982217720473034492}
   chanceToFlee: 35
+  gameOverScene: GameOver
+  rewardXP: 5000
+  rewardItems:
+  - Wooden Sword
+  - Iron Sword
+  - Leather Armor
 --- !u!1 &5982217719591050437
 GameObject:
   m_ObjectHideFlags: 0

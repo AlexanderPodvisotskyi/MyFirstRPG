@@ -215,10 +215,6 @@ public class BattleManager : MonoBehaviour
 				// Fail battle
 				StartCoroutine(GameOverCo());
 			}
-
-			//BattleScene.SetActive(false);
-			//GameManager.instense.battleActive = false;
-			//battleActive = false;
 		}
 		else
 		{
