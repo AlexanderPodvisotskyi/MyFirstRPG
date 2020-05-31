@@ -32,4 +32,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SecondLocation.unity
     guid: 26e60c3c41f444c569ee1dd446b49052
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d1154c16cdf474bb8aa3375db9763452,
+      type: 2}
