@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 
 	public Animator myAnimator;
 
+	public Joystick joystick;
+
 	public static PlayerController instense;
 
 	public string areaTransitionName;
@@ -15,6 +17,9 @@ public class PlayerController : MonoBehaviour
 	private Vector3 topRightLimit;
 
 	public bool canMove = true;
+
+	private float horizontalMove;
+	private float verticalMove;
 
 	// Start is called before the first frame update
 	void Start()
@@ -37,15 +42,41 @@ public class PlayerController : MonoBehaviour
 	{
 		if (canMove)
 		{
-			rigidbodyes.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")) * moveSpeed;
+			if (joystick.Horizontal >= .2f)
+			{
+				horizontalMove = moveSpeed;
+			}
+			else if (joystick.Horizontal <= -.2f)
+			{
+				horizontalMove = -moveSpeed;
+			}
+			else
+			{
+				horizontalMove = 0;
+			}
+
+			if (joystick.Vertical >= .2f)
+			{
+				verticalMove = moveSpeed;
+			}
+			else if (joystick.Vertical <= -.2f)
+			{
+				verticalMove = -moveSpeed;
+			}
+			else
+			{
+				verticalMove = 0;
+			}
+
+			rigidbodyes.velocity = new Vector2(horizontalMove, verticalMove) * moveSpeed;
 			myAnimator.SetFloat("moveX", rigidbodyes.velocity.x);
 			myAnimator.SetFloat("moveY", rigidbodyes.velocity.y);
 
-			if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 ||
-			Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+			if (horizontalMove == 1 || horizontalMove == -1 ||
+			verticalMove == 1 || verticalMove == -1)
 			{
-				myAnimator.SetFloat("lastMoveX", Input.GetAxis("Horizontal"));
-				myAnimator.SetFloat("lastMoveY", Input.GetAxis("Vertical"));
+				myAnimator.SetFloat("lastMoveX", horizontalMove);
+				myAnimator.SetFloat("lastMoveY", verticalMove);
 			}
 
 			transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);

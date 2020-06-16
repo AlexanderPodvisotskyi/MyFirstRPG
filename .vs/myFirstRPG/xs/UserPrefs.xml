@@ -1,16 +1,42 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleStarter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
       <File FileName="Assets/Scripts/BattleTargetsButton.cs" Line="26" Column="70" />
-      <File FileName="Assets/Scripts/BattleManager.cs" />
-      <File FileName="Assets/Scripts/BattleMagicSelect.cs" />
-      <File FileName="Assets/Scripts/BattleNotification.cs" />
-      <File FileName="Assets/Scripts/BattleCharacter.cs" />
-      <File FileName="Assets/Scripts/GameManager.cs" />
-      <File FileName="Assets/Scripts/GameOver.cs" />
-      <File FileName="Assets/Scripts/BattleReward.cs" />
-      <File FileName="Assets/Scripts/BattleType.cs" />
-      <File FileName="Assets/Scripts/BattleStarter.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/BattleManager.cs" Line="17" Column="36" />
+      <File FileName="Assets/Scripts/BattleMagicSelect.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleNotification.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="211" Column="14" />
+      <File FileName="Assets/Scripts/GameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleReward.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleType.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/BattleStarter.cs" Line="20" Column="24" />
+      <File FileName="Assets/Scripts/CharStats.cs" Line="21" Column="26" />
+      <File FileName="Assets/Scripts/AudioManager.cs" Line="3" Column="14" />
+      <File FileName="Assets/Scripts/CameraConroller.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="43" Column="15" />
+      <File FileName="Assets/Scripts/UIFade.cs" Line="4" Column="14" />
+      <File FileName="Assets/Scripts/AreaEntrance.cs" Line="16" Column="1" />
+      <File FileName="../../../../../Applications/Unity/Hub/Editor/2019.3.15f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/CanvasUpdateRegistry.cs" Line="169" Column="1" />
+      <File FileName="Assets/Scripts/AreaController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="5" Column="21" />
+      <File FileName="Assets/Scripts/BattleMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DamageNumber.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DestroyOverLiftime.cs" Line="15" Column="27" />
+      <File FileName="Assets/Scripts/DialogActivator.cs" Line="23" Column="3" />
+      <File FileName="Assets/Scripts/DialogManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Item.cs" Line="33" Column="15" />
+      <File FileName="Assets/Scripts/PickUpItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerLoader.cs" Line="9" Column="26" />
+      <File FileName="Assets/Scripts/QuestManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/QuestMarker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/QuestObjectActivator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMenu.cs" Line="19" Column="22" />
+      <File FileName="Assets/Scripts/LoadingScene.cs" Line="24" Column="37" />
+      <File FileName="Assets/Scripts/ItemButton.cs" Line="38" Column="5" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="26" Column="15" />
+      <File FileName="../../../../../Applications/Unity/Hub/Editor/2019.3.15f1/Unity.app/Contents/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/CanvasScaler.cs" Line="229" Column="1" />
+      <File FileName="Assets/Scripts/JoystickHelper.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,27 +44,31 @@
           <Node name="MyFirstRPG" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="BattleStarter.cs" selected="True" />
+                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>musicStarted</Value>
+          <Value>UIScreen.Chield</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ee550172-4ed3-4e72-81db-27fb3a8b3a2a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b8a766e1-84c7-4271-9072-761f02299bf5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />
       <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="61" column="1" />
       <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/ShopKeeper.cs" relfile="Assets/Scripts/ShopKeeper.cs" line="17" column="1" />
       <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/AreaEntrance.cs" relfile="Assets/Scripts/AreaEntrance.cs" line="16" column="1" />
-      <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="12" column="1" />
+      <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="14" column="1" />
+      <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/EssentialsLoader.cs" relfile="Assets/Scripts/EssentialsLoader.cs" line="19" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

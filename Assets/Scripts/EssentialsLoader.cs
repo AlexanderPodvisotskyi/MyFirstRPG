@@ -20,6 +20,7 @@ public class EssentialsLoader : MonoBehaviour
 		{
 			PlayerController clone = Instantiate(Player).GetComponent<PlayerController>();
 			PlayerController.instense = clone;
+			PlayerController.instense.joystick = UIScreen.GetComponent<JoystickHelper>().joystick;
 		}
 
 		if (GameManager.instense == null)
@@ -27,10 +28,10 @@ public class EssentialsLoader : MonoBehaviour
 			GameManager.instense = Instantiate(gameManager).GetComponent<GameManager>();
 		}
 
-		if (AudioManager.instance == null)
-		{
-			AudioManager.instance = Instantiate(audioManager).GetComponent<AudioManager>();
-		}
+		//if (AudioManager.instance == null)
+		//{
+		//	AudioManager.instance = Instantiate(audioManager).GetComponent<AudioManager>();
+		//}
 
 		//if (BattleManager.instance == null)
 		//{
