@@ -10,7 +10,7 @@
       <File FileName="Assets/Scripts/GameOver.cs" />
       <File FileName="Assets/Scripts/BattleReward.cs" />
       <File FileName="Assets/Scripts/BattleType.cs" />
-      <File FileName="Assets/Scripts/BattleStarter.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/BattleStarter.cs" Line="95" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ee550172-4ed3-4e72-81db-27fb3a8b3a2a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b8a766e1-84c7-4271-9072-761f02299bf5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/aleksandrpodvysockij/Documents/GitHub/MyFirstRPG/Assets/Scripts/CharStats.cs" relfile="Assets/Scripts/CharStats.cs" line="86" column="15" />

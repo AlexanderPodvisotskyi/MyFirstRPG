@@ -11,6 +11,9 @@ public class BattleReward : MonoBehaviour
 	public string[] rewardItems;
 	public int expEarned;
 
+	public bool markQuestComplete;
+	public string questToMark;
+
 	public static BattleReward instance;
 	// Start is called before the first frame update
 	void Start()
@@ -61,5 +64,10 @@ public class BattleReward : MonoBehaviour
 		rewardScreen.SetActive(false);
 
 		GameManager.instense.battleActive = false;
+
+		if (markQuestComplete)
+		{
+			QuestManager.instance.MarkQuestComplete(questToMark);
+		}
 	}
 }
