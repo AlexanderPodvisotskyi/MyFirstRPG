@@ -359,14 +359,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsForSale:
-  - Iron Armor
+  - Mana Potion
   - Iron Armor
   - Leather Armor
   - Mana Potion
   - Wooden Sword
-  - 
-  - Mana Potion
   - Iron Sword
+  - 
+  - 
   - 
   - 
   - 
@@ -3019,7 +3019,7 @@ PrefabInstance:
     - target: {fileID: 5758832549501471056, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}
       propertyPath: orthographic size
-      value: 2.0531654
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5758832549501471057, guid: 7d5c4c08766944462b9ad1e44fd95282,
         type: 3}

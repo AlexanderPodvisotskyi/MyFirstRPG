@@ -21905,7 +21905,7 @@ MonoBehaviour:
     rewardItems:
     - Iron Sword
     - Mana Potion
-    rewardXP: 8000
+    rewardXP: 1500
   activateOnEnter: 1
   activateOnStay: 0
   activateOnExit: 0

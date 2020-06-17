@@ -238,6 +238,7 @@ MonoBehaviour:
   dialogActive: 0
   fadingBetweenAreas: 0
   shopActive: 0
+  battleActive: 0
   itemHeldArray:
   - 
   - 
@@ -323,7 +324,7 @@ MonoBehaviour:
   questMarkerNames:
   - 
   - Figth the demon
-  - Enter the Cave
+  - enter the cave
   - Quest test
   - Save the world
   questMarkersComplete: 0000000000

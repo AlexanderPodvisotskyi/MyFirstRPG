@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{DAD0E433-2611-C1F7-9136-C7B69DCB77AD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleStarter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EssentialsLoader.cs">
     <Files>
       <File FileName="Assets/Scripts/BattleTargetsButton.cs" Line="26" Column="70" />
       <File FileName="Assets/Scripts/BattleManager.cs" />
@@ -10,7 +10,8 @@
       <File FileName="Assets/Scripts/GameOver.cs" />
       <File FileName="Assets/Scripts/BattleReward.cs" />
       <File FileName="Assets/Scripts/BattleType.cs" />
-      <File FileName="Assets/Scripts/BattleStarter.cs" Line="95" Column="30" />
+      <File FileName="Assets/Scripts/BattleStarter.cs" Line="18" Column="2" />
+      <File FileName="Assets/Scripts/EssentialsLoader.cs" Line="33" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,7 +19,7 @@
           <Node name="MyFirstRPG" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="BattleStarter.cs" selected="True" />
+                <Node name="EssentialsLoader.cs" selected="True" />
               </Node>
             </Node>
           </Node>
